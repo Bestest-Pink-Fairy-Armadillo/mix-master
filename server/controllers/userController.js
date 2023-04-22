@@ -12,7 +12,7 @@ const userController = {};
 userController.createUser = (req, res, next) => {
   console.log('controller entered');
   // get username and password from form input submission
-  const { username, password, firstname } = req.body[0];
+  const { username, password, firstname } = req.body;
   console.log('body: ', req.body);
   // if username or password fields not filled in, return error to express global error handler
   if (!username || !password) {
