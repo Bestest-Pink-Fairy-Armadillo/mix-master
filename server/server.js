@@ -1,6 +1,8 @@
 const path = require('path');
 const express = require('express');
 const app = express();
+const loginRouter = require('./routers/loginRouter');
+// const favoritesRouter = require('./routers/favoritesRouter');
 
 const PORT = 3000;
 
@@ -13,8 +15,13 @@ app.use(express.urlencoded({ extended: true }));
 // handle requests to static files
 app.use(express.static(path.resolve(__dirname, '../src')));
 
-//
-// app.get('/user'), mixController;
+// route for login-related requests
+app.use('/login', loginRouter);
+
+// route for favorites-related requests
+// app.use('/favorites', favoritesRouter);
+
+// error handlers placeholder
 
 // start server
 app.listen(PORT, () => {
