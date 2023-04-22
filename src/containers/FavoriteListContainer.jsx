@@ -2,7 +2,9 @@ import React from 'react'
 
 function FavoriteListContainer() {
   return (
-    <div>FavoriteListContainer</div>
+    <div>FavoriteListContainer
+
+    </div>
   )
 }
 

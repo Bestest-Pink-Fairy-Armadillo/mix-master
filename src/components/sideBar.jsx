@@ -1,7 +1,21 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
-export default function sideBar() {
+function SideBar() {
+  function toHome() {
+    console.log(`I'm Home`);
+  }
+
+  function toFavs() {
+    console.log(`I'm in Favs`);
+  }
+
+
   return (
-    <div>sideBar</div>
+    <>
+      <button onClick={toHome}>Home</button>
+      <button onClick={toFavs}>Favorites</button>
+    </>
   )
 }
+
+export default SideBar;
