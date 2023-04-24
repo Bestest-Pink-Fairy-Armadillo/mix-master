@@ -1,20 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import SideBar from './components/SideBar.jsx'
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate, Redirect } from 'react-router-dom';
+import SideBar from './components/SideBar.jsx';
 import MainContainer from './containers/MainContainer.jsx';
-import styles from './styles/styles.scss';
+import Login from './components/Login.jsx'
 
 function App () {
-  const [websiteState, setWebsiteState] = useState('');
+  const [loggedIn, setLoggedIn] = useState(false);
 
-    return (
-      <>
-        <h1 id='websiteTitle' >Mix Master tm</h1>
-        <div>
-          <SideBar id='sideBar' />
-          <MainContainer id='mainContainer'/>
-        </div>
-      </>
-    )
+
+  // useEffect(() => {
+  //   if (loggedIn === false) {
+  //     navigate('/login');
+  //   }
+  // }, [loggedIn, navigate]);
+
+  return (
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<div id='app'><SideBar /> <MainContainer /> </div>} />
+        <Route path="/signup" element={<div>Signup</div>} /> 
+        <Route path="/favorites" element={<div>Hi</div>} /> 
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;

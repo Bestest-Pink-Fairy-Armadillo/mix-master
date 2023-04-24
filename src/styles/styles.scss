@@ -1,0 +1,30 @@
+#app {
+    display: flex;
+
+     #sideBar {
+      height: 100%;
+      width: 15%;
+      border-style: 2px solid black;
+
+      .favButtons {
+        display: flex;
+        flex-direction: column;
+      }
+
+    }
+    
+
+}
+
+#mainContainer {
+    border-style: 2px solid black;
+
+    #search{
+
+    }
+    
+    #recipeContainer {
+        
+    }
+
+}

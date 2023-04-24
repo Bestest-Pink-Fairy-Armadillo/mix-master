@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=MedievalSharp&family=Roboto&display=swap');
+
+
+body {
+  margin: 0px;
+  background-color: rgb(87, 81, 79);
+}
+
+
+#root {
+  height: 99vh;
+  margin: .5vh;
+  
+}
+
+.sideBarButton button {
+  width: 100px;
+  border: none; 
+  padding: 10px 0px 10px 0px;
+  font-size: 30px;
+  background-color: transparent;
+  font-family: 'MedievalSharp', cursive;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0px 0px 6px #ffffff;
+}
+
+#app {
+    display: flex;
+    height:100%;
+    gap: 2px;
+    
+}
+
+#sideBar {
+  height: 100%;
+  width: 15%;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(38, 38, 46);
+  box-shadow: 0px 0px 7px rgb(0, 0, 0);
+}
+
+.sideBarButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.favButtons {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+#mainContainer {
+    height: 100%;
+    width: 85%;
+    border: none;
+    border-radius: 20px;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    flex-direction: row;
+    background-image: url("https://www.japantimes.co.jp/wp-content/uploads/2022/05/np_file_159307.jpeg");
+    background-size: auto 100%;
+    background-position: center center;
+    box-shadow: 0px 0px 7px rgb(0, 0, 0);
+    flex-wrap: wrap;
+}
+
+.searchItems{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 40px;
+  font-family: 'MedievalSharp', cursive;
+  color: white;
+  text-shadow: 0px 0px 6px #ffffff;
+}
+
+.searchInput{
+  width: 30vw;
+  font-size: 20px;
+  height: 1em;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+}
+
+.searchInput.active{
+  width: 30%;
+  outline: none;
+  position: fixed;
+  top: 8px;
+  order: 1;
+}
+
+#recipeContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding-top: 10px;
+}
+
+.recipe-card {
+  width: 47%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  padding: 10px;
+  /* justify-content: center; */
+}
+
+.recipe-card h2 {
+  margin: 5px;
+}
+
+#cardButton {
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  bottom: 0;
+}
+
+/*Login **/
+.loginPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.loginPage input {
+  width: 100px;
+}
