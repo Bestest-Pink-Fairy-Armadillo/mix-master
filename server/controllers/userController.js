@@ -10,10 +10,8 @@ const userController = {};
 
 // create user in database
 userController.createUser = (req, res, next) => {
-  console.log('controller entered');
   // get username and password from form input submission
   const { username, password, firstname } = req.body;
-  console.log('body: ', req.body);
   // if username or password fields not filled in, return error to express global error handler
   if (!username || !password) {
     return next({
@@ -27,7 +25,7 @@ userController.createUser = (req, res, next) => {
 
   db.query(query).then((data) => {
     // if username exists, return error to express global error handler
-    if (!data) {
+    if (data.rows.length) {
       return next({
         log:
           'Error occurred in userController.createUser: ' +
