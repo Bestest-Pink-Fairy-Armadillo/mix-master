@@ -1,7 +1,7 @@
 // note: these are middleware
 
 // temporary import: don't have info on database yet
-const db = require('../models/mixMasterModel');
+const db = require('../models/SQLModel');
 
 const bcrypt = require('bcryptjs');
 const SALT_WORK_FACTOR = 10;
@@ -12,11 +12,12 @@ const userController = {};
 userController.createUser = (req, res, next) => {
   // get username and password from form input submission
   const { username, password, firstname } = req.body;
-  // if username or password fields not filled in, return error to express global error handler
+  // if username or password fields not filled in
+  // return error to express global error handler
   if (!username || !password) {
     return next({
       log: 'Error occurred in userController.createUser',
-      message: 'Error',
+      message: 'Error: missing username or password',
     });
   }
   // check if username already taken
