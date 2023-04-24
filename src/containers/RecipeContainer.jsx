@@ -31,15 +31,16 @@ function RecipeContainer(props) {
     .catch(error => {
       console.log(error)
     }); 
+    
   }, [props.search]);
 
     
 
   return (
-    <>
-    <div>RecipeContainer</div>
+    <div >
+    {/* <div>RecipeContainer</div> */}
     {data.length > 0 ? (
-      <ul>
+      <ul id='recipeContainer'>
         {data.map(item => (
           <RecipeCard recipeData={item} />
         ))}
@@ -47,7 +48,7 @@ function RecipeContainer(props) {
     ) : (
       <div></div>
     )}
-    </>
+    </div>
   )
 }
 

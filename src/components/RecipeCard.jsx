@@ -18,7 +18,7 @@ function RecipeCard(props) {
         ))}
         {/* {console.log(props.recipeData.instructions.split('. '))} */}
         </ol>
-        <button>Add to Favorite</button>
+        <button id='cardButton'>Add to Favorite</button>
     </div>
   )
 }
