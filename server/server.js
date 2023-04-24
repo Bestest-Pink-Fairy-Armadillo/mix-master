@@ -16,7 +16,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.resolve(__dirname, '../src')));
 
 // route for login-related requests
-app.use('/login', loginRouter);
+// also create mongo db entry to store any favorites
+app.use('/login', favoritesRouter, loginRouter);
 
 // route for favorites-related requests
 app.use('/favorites', favoritesRouter);
