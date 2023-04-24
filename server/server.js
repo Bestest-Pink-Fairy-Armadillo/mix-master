@@ -2,7 +2,7 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const loginRouter = require('./routers/loginRouter');
-// const favoritesRouter = require('./routers/favoritesRouter');
+const favoritesRouter = require('./routers/favoritesRouter');
 
 const PORT = 3000;
 
@@ -19,9 +19,22 @@ app.use(express.static(path.resolve(__dirname, '../src')));
 app.use('/login', loginRouter);
 
 // route for favorites-related requests
-// app.use('/favorites', favoritesRouter);
+app.use('/favorites', favoritesRouter);
 
-// error handlers placeholder
+// catch-all route handler for any requests to an unknown route
+app.use((req, res) => res.status(404).send('No cocktails here :( '));
+
+// global error handler
+app.use((err, req, res, next) => {
+  const defaultErr = {
+    log: 'Express error handler caught unknown middleware error',
+    status: 500,
+    message: { err: 'An error occurred' },
+  };
+  const errorObj = Object.assign({}, defaultErr, err);
+  console.log(errorObj.log);
+  return res.status(errorObj.status).json(errorObj.message);
+});
 
 // start server
 app.listen(PORT, () => {

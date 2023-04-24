@@ -1,3 +1,4 @@
+// model for SQL database
 const { Pool } = require('pg');
 
 const PG_URI =
