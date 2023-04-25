@@ -10,6 +10,7 @@ const userController = {};
 
 // create user in database
 userController.createUser = async (req, res, next) => {
+  console.log('request body: ', req.body);
   // get username and password from form input submission
   const { username, password, firstname } = req.body;
   // if username or password fields not filled in
@@ -46,7 +47,7 @@ userController.createUser = async (req, res, next) => {
 
   const data = await db.query(hashQuery, hashValues)
   // console.log('added to database');
-  res.locals.result = data.rows[0];
+  res.locals.token = true;
   next();
 };
 
@@ -79,7 +80,7 @@ userController.verifyUser = async (req, res, next) => {
       });
     };
     // if they match, store something in res.locals for postman result and proceed to next middleware
-    res.locals.result = 'success';
+    res.locals.token = true;
     next();
   }
   catch(err) {

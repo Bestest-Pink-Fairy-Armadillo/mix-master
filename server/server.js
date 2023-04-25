@@ -17,9 +17,8 @@ app.use(express.static(path.resolve(__dirname, '../src')));
 
 // route for login-related requests
 // also create mongo db entry to store any favorites
-app.use('/login', favoritesRouter, loginRouter);
-
-// route for favorites-related requests
+// app.use('/login', loginRouter);
+app.use('/api', loginRouter);
 app.use('/favorites', favoritesRouter);
 
 // catch-all route handler for any requests to an unknown route

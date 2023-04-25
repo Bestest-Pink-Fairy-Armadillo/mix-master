@@ -31,10 +31,22 @@ module.exports = {
         test: /\s?css$/,
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.png$/i,
+        type: "asset/resource",
+        use: {
+          loader: 'file-loader',
+        },
       }
     ]
   },
   devServer: {
+    static: {
+      directory: path.resolve(__dirname, 'dist'),
+      publicPath: '/dist'
+    },
+    compress: true,
     port: 8080,
     proxy: {
       '/api': 'http://localhost:3000',
