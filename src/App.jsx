@@ -3,10 +3,17 @@ import { BrowserRouter as Router, Routes, Route, Link, useNavigate, Redirect } f
 import SideBar from './components/SideBar.jsx';
 import MainContainer from './containers/MainContainer.jsx';
 import Login from './components/Login.jsx'
+import Signup from './components/Signup.jsx';
 
 function App () {
   const [loggedIn, setLoggedIn] = useState(false);
 
+  // if (!loggedIn) {
+  //   return (
+  //     <Login />
+  //     // setLoggedIn={setLoggedIn}
+  //   )
+  // }
 
   // useEffect(() => {
   //   if (loggedIn === false) {
@@ -19,8 +26,8 @@ function App () {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<div id='app'><SideBar /> <MainContainer /> </div>} />
-        <Route path="/signup" element={<div>Signup</div>} /> 
-        <Route path="/favorites" element={<div>Hi</div>} /> 
+        <Route path="/signup" element={<Signup />} /> 
+        <Route path="/favorites" element={<SideBar /> } /> 
       </Routes>
     </Router>
   );

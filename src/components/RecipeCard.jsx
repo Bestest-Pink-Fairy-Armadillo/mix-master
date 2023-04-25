@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { FaStar } from "react-icons/fa";;
 
 function RecipeCard(props) {
+  const [isStarred, setIsStarred] = useState(false);
+
   return (
     <div className='recipe-card'>
-        <h2>{props.recipeData.name}</h2>
+        <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
+          <h2>{props.recipeData.name}</h2> 
+          <FaStar
+          style={{ marginLeft: "10px", cursor: "pointer", color: isStarred ? "gold" : "grey" }}
+          onClick={() => setIsStarred(!isStarred)}
+          />
+        </div>
         <ul>Ingredients:
         {props.recipeData.ingredients.map(ing => (
           <li>{ing}</li>
@@ -18,7 +27,6 @@ function RecipeCard(props) {
         ))}
         {/* {console.log(props.recipeData.instructions.split('. '))} */}
         </ol>
-        <button id='cardButton'>Add to Favorite</button>
     </div>
   )
 }

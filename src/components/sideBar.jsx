@@ -14,6 +14,7 @@ function SideBar() {
   return (
     <div id='sideBar'>
       <div className='sideBarButton'>
+      <div>Mix-Master</div>
         <Link to="/">
           <button onClick={toHome}>Home</button>
         </Link>

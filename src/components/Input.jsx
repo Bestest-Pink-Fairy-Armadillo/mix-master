@@ -1,4 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react';
+// import logo from './Assets/mixmaster.png';
+import logoImage from '../Assets/mixmaster.png'
+let logoUrl = "https://em-content.zobj.net/source/microsoft-teams/337/tropical-drink_1f379.png"
+
 
 function Input(props) {
   // const [inputValue, setInputValue] = useState('');
@@ -16,9 +20,9 @@ function Input(props) {
 
   return (
     <div className='searchItems'>
-      {/* <div>Input</div> */}
-      {searchState === false ? (<div>All your problems will be solved here...</div>) : (<div></div>)}
-      <input placeholder="Drink name or ingredients..." className={`searchInput ${searchState === true ? 'active' : ''}`} type="text" onKeyDown={pressEnter}/>
+      
+      {searchState === false ? (<><img src={logoUrl} /><div>Mix-Master</div></>) : (<div></div>)}
+      <input placeholder="Search your drink name or ingredients..." className={`searchInput ${searchState === true ? 'active' : ''}`} type="text" onKeyDown={pressEnter}/>
     </div>
   )
 }
