@@ -2,7 +2,9 @@
 
 <div align="center">
 
-<img src="./src/Assets/mixmaster.png" width="600" >
+<!-- <img src="./src/Assets/mixmaster.png" width="600" > -->
+
+## Find cocktail recipes with ingredients you already have on hand.
 
 </div>
 
@@ -12,12 +14,14 @@
 
 1.  Fork and clone the repository to your local machine
 2.  Install dependencies with `npm install`
-3.  Run `npm start` to spin up the server
-4.  Run `npm run dev` to start up the application
+3.  Run `npm run start` to spin up the server and start the application using Webpack dev server
 
 <br>
 
 ## Key Features
+
+- Search by drink name or by ingredient name
+- Create a login and save recipes to favorites
 
 <br>
 
