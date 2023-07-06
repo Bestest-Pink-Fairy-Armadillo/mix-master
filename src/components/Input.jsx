@@ -1,8 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 // import logo from './Assets/mixmaster.png';
-import logoImage from '../Assets/mixmaster.png'
-let logoUrl = "https://em-content.zobj.net/source/microsoft-teams/337/tropical-drink_1f379.png"
-
+import logo from '../Assets/mixmaster_logo.png';
 
 function Input(props) {
   // const [inputValue, setInputValue] = useState('');
@@ -10,21 +8,29 @@ function Input(props) {
 
   function pressEnter(event) {
     if (event.keyCode === 13) {
-        props.changeSearch(event.target.value);
-        setSearchState(
-          true
-        );
-        console.log(searchState);
+      props.changeSearch(event.target.value);
+      setSearchState(true);
+      console.log(searchState);
     }
   }
 
   return (
-    <div className='searchItems'>
-      
-      {searchState === false ? (<><img src={logoUrl} /><div>Mix-Master</div></>) : (<div></div>)}
-      <input placeholder="Search your drink name or ingredients..." className={`searchInput ${searchState === true ? 'active' : ''}`} type="text" onKeyDown={pressEnter}/>
+    <div className="searchItems">
+      {searchState === false ? (
+        <>
+          <img src={logo} width="600" />
+        </>
+      ) : (
+        <div></div>
+      )}
+      <input
+        placeholder="Search your drink name or ingredients..."
+        className={`searchInput ${searchState === true ? 'active' : ''}`}
+        type="text"
+        onKeyDown={pressEnter}
+      />
     </div>
-  )
+  );
 }
 
 export default Input;

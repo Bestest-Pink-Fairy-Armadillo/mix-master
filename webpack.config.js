@@ -5,13 +5,13 @@ module.exports = {
   entry: './src/index.js',
 
   output: {
-    path: path.join(__dirname, '/dist'),
+    path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js',
   },
 
   plugins: [
-    new HTMLWebpackPlugin({
-      template: './src/index.html',
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, './src/index.html'),
     }),
   ],
 
