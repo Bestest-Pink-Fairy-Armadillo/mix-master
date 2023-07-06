@@ -1,7 +1,7 @@
 {
   "name": "mix-master",
   "version": "1.0.0",
-  "description": "Codesmith Scratch Project",
+  "description": "Find cocktail recipes with ingredients you already have on hand",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot & node server/server.js",
