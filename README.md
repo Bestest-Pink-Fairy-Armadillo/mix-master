@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<!-- <img src="./src/Assets/mixmaster.png" width="600" > -->
+<img src="./src/Assets/mixmaster_logo.png" width="400" >
 
 ## Find cocktail recipes with ingredients you already have on hand.
 
@@ -19,6 +19,8 @@
 <br>
 
 ## Key Features
+
+<img src="src/Assets/MixMasterHome.png" width="450">
 
 - Search by drink name or by ingredient name
 - Create a login and save recipes to favorites
@@ -56,7 +58,7 @@ If you have any questions or need help with the project, please don't hesitate t
 
 <br>
 
-[![JavaScript][JavaScript]][JavaScript-url] [![React][React.js]][React-url] ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) [![HTML5][HTML5]][HTML5-url] ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+[![JavaScript][JavaScript]][JavaScript-url] [![React][React.js]][React-url] ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) [![HTML5][HTML5]][HTML5-url] ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black) ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
 <br>
 
