@@ -33,18 +33,15 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.png$/i,
-        type: "asset/resource",
-        use: {
-          loader: 'file-loader',
-        },
-      }
-    ]
+        test: /\.(png|jpe?g|gif)$/i,
+        use: ['file-loader'],
+      },
+    ],
   },
   devServer: {
     static: {
       directory: path.resolve(__dirname, 'dist'),
-      publicPath: '/dist'
+      publicPath: '/dist',
     },
     compress: true,
     port: 8080,
