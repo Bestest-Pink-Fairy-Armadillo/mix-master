@@ -34,7 +34,6 @@
 - Pull in youtube video on how to make chosen cocktail
 - Users store recipes to favorites
 - Create own cocktail recipe and add it to favorites
-  Bonus: adding the logo from Assets folder
 
   <br>
 
